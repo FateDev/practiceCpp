@@ -9,7 +9,7 @@ int main() {
 	int carry = 0;
 
 	for (int i = 0; i < arraySize; i++) {
-		for (int j = arraySize -1; j > i; j--) {
+		for (int j = 0; j < arraySize; j++) {
 			if (intArray[i] > intArray[j]) {
 				carry = intArray[j];
 				intArray[j] = intArray[i];

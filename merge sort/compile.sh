@@ -1,3 +1,3 @@
-g++ -o prog mergeSort.cpp
-sudo chmod +x prog
-./prog
+g++ -o prog.sh mergeSort.cpp
+chmod +x prog.sh
+./prog.sh

@@ -1,3 +1,3 @@
-g++ -o prog main.cpp
-sudo chmod +x prog
-./prog
+g++ -o prog.sh main.cpp
+chmod +x prog.sh
+./prog.sh

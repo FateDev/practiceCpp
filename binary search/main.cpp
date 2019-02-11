@@ -9,7 +9,7 @@ int main()
   
   unsigned int begin = 0; //index of the first element of the list
   unsigned int end = sizeof(list)/sizeof(int)-1; //size of the list, to be used as index
-  unsigned int search = 5; //the value to search for
+  unsigned int search = 9; //the value to search for
   
   binSort(list, begin, end, search); //the binary search function
 }
@@ -40,7 +40,7 @@ void binSort(int *arr, unsigned int &begin, unsigned int &end, unsigned int sear
         end = newEnd;
         binSort(arr, begin, end, search);
       }else if(arr[end] > search && arr[newBegin] < search){
-        begin = newEnd;
+        begin = newBegin;
         binSort(arr, begin, end, search);
       }
     }

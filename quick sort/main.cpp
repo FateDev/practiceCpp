@@ -27,6 +27,10 @@ void swap(int *arr, int index1, int index2){ //swaps 2 indexes of an array
 }
 
 bool quickSort(int *arr, int begin, int end){ //quicksort
+    if(end < 4){
+        return false;    
+    }
+
     int gap = end - begin; //the gap betwen the beginning and end
     int midPoint = gap/2 + begin; //the mid point of th
 
@@ -69,4 +73,6 @@ bool quickSort(int *arr, int begin, int end){ //quicksort
     if(end_2 - begin_2 > 3){ //if the gap between the begin and end of the arrays is more than 3, proceed to more sorting, otherwise don't as it wouldn't have much of a useful effect, as there would only be 4 values or so to shift
         quickSort(arr, begin_2, end_2); //recursively sort using the values above
     }
+    
+    return true;
 }

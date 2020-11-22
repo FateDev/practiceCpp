@@ -20,9 +20,9 @@ int get_file_size(int fd){
     exit(1);
   }
 
-  if(S_ISBLK(file_stat.st_mode)){ 
+  if(S_ISBLK(file_stat.st_mode)){ //true if the file is a block special file (a device like a disk)
     u64 bytes;
-    if(ioctl(fd, BLKGETSIZE64, &bytes) < 0){ //gives size of a disk in bytes
+    if(ioctl(fd, BLKGETSIZE64, &bytes) < 0){ //gives size of a disk in bytes as opposed to returning number of 512 byte blocks, which is what BLKGETSIZE does instead of BLKGETSIZE64
       perror("ioctl BLKGETSIZE");
       exit(1);
     }
